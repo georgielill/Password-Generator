@@ -30,6 +30,7 @@ if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial
   return null;
 }
 
+//object literal to return users selections
 return {
   length: length,
   includeLowercase: includeLowercase,
@@ -38,11 +39,12 @@ return {
   includeSpecial: includeSpecial
 };
 
-
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
