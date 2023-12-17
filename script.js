@@ -16,6 +16,28 @@ var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K
 function getPasswordOptions() {
   var length = parseInt(prompt("Enter the amount of characters you want your password to be, between 8 and 128 characters"));
 }
+if (isNaN(length) || length < 8 || length > 128) {
+  alert("Invalid length! Password length must be between 8 and 128 characters.");
+  return null;
+}
+var includeLowercase = confirm("Include lowercase characters?");
+var includeUppercase = confirm("Include uppercase characters?");
+var includeNumeric = confirm("Include numeric characters?");
+var includeSpecial = confirm("Include special characters?");
+
+if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+  alert("At least one character type must be selected!");
+  return null;
+}
+
+return {
+  length: length,
+  includeLowercase: includeLowercase,
+  includeUppercase: includeUppercase,
+  includeNumeric: includeNumeric,
+  includeSpecial: includeSpecial
+};
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
