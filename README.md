@@ -9,3 +9,6 @@ Uppercase letters
 Numeric characters
 Special characters (e.g., @, %, +, etc.)
 
+<img width="1440" alt="Screenshot 2023-12-22 at 19 25 49" src="https://github.com/georgielill/Password-Generator/assets/47761199/730da798-bc4b-411f-a587-bff6643d2d4f">
+
+
